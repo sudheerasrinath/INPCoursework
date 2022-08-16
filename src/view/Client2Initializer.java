@@ -1,3 +1,5 @@
+package view;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -5,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ClientInitializer extends Application {
+public class Client2Initializer extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -13,9 +15,10 @@ public class ClientInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("ClientForm.fxml"))));
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/LoginForm.fxml"))));
+        primaryStage.setResizable(false);
+        primaryStage.setTitle("Chat");
+        primaryStage.centerOnScreen();
         primaryStage.show();
     }
-
-    }
-
+}
